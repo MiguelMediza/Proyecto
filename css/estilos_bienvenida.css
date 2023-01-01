@@ -1,0 +1,326 @@
+
+
+
+
+/*! =================================================*/
+/*! =========== Estilos de todo el header ========== */
+/*! =================================================*/
+
+
+/* Estilos para la cabecera/header */
+.header{
+    background: #00708b;
+	font-size: 18px;
+    color: white; 
+    padding: 2rem 0;
+    /* position: fixed; Menu fijo arriba */
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+/* Estilos para la cabecera */
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.header a{
+    
+    color: white;
+    text-decoration: none;
+}
+/* Ocultamos el icono del menu */
+.menu-icon{
+
+    display: none;
+}
+
+/* Estilos a los items dentro del menu */
+.logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .logo {
+    position: relative;
+    animation: move 1s ease;
+  }
+  .logo:before{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    z-index: 1;
+    border-radius: 100%;
+    border-style: inset;
+    animation: girar2 1s infinite linear;
+  }
+  @keyframes girar2 {
+    0% {
+      transform: rotate(360deg);
+    }
+  }
+
+/* Estilos a las lista de vinculos en el menu */
+.navigation ul{
+    
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+/* Colocar los vinculos en linea y que se comporten como bloque */
+.navigation ul li{
+    display: inline-block;
+    padding-left: 20px;
+}
+/* Una perqueña animación a los vinculos del menu */
+.navigation ul li a{
+    
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+    width: 300px;
+    text-align: inherit;
+}
+
+/* Al pasar por un vinculo del menu cambia de color */
+.navigation ul li a:hover{
+    
+    background:rgb(28, 105, 248);
+}
+/* Cambia el color del remarco de la pagina en la que estemos */
+.navigation a.actual {
+	background-color: #005f77;
+}
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{
+	display: block;
+	color: #fdfdfd;
+	text-decoration: none;
+}
+/* Submenu*/
+
+.submenu{
+	position: absolute;
+	background: #005f77;
+	width: 150%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+    border-radius: 5px;
+    width: 210px;
+
+}
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+	color: #fff;
+	text-decoration: none;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+    width: 170px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+    z-index: 99999;
+}
+
+.Imagen1{
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 10%;
+}
+.Imagen2{
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 15%;
+}
+
+.Usuario{
+    background-color: #00708b;
+}
+.nombre{
+    font-weight: 300;
+    line-height: 50px;
+    font-size: 50px;
+    color: rgb(0,255,255);
+    text-align: center;
+    padding-bottom: 15px;
+}
+/*! =================================================*/
+/*! =========== Estilos de todo el footer ========== */
+/*! =================================================*/
+.footer{
+    margin-top: 1px;
+    background:#00708b;
+    padding-top: 15px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    font-family: 'Roboto';
+    font-size: 15px;
+}
+/* Dividimos el footer en 3 columnas con inline-block y le asignamos 33% del display a cada una */
+.columna1{
+    display: block;
+    text-align: left;
+    text-decoration: none;
+}
+footer a{
+    text-decoration: none;
+    color: #f2f2f2;
+}
+.columna2{
+    display: block;
+    margin-top: 40px;
+}
+.footer h8 {
+    font-size: 10px;
+}
+.redes-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.redes-container ul li {
+    display: inline-block;
+    margin: auto 15px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+.redes-container ul li a{
+    display: block;
+    padding: 0 10px;
+    background: #333;
+    color: #fff;
+    line-height: 40px;
+    font-size: 18px;
+    box-shadow: 0 3px 5px 0px rgba(0, 0, 0, .2);
+    transition: .2s;
+}
+.redes-container ul:hover a{
+    filter: blur(2px);
+}
+.redes-container ul li a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .4);
+    filter: none;
+}
+:root{/* Creamos variables con colores para utilizar siempre que la necesitemos */
+    --Facebook: #3b5999;
+    --Instagram: #e4405f;
+    --twitter: #55acee;
+}
+.redes-container ul li .facebook:hover{
+    background: var(--Facebook);/* Utilizamos la variable de color creada arriba */
+}
+.redes-container ul li .instagram:hover{
+    background: var(--Instagram);/* Utilizamos la variable de color creada arriba */
+}
+.redes-container ul li .twitter:hover{
+    background: var(--twitter);/* Utilizamos la variable de color creada arriba */
+}
+
+
+
+/* Responsiva */
+@media only screen and (max-width: 1200px) {
+    
+    .menu-icon{
+        
+        display: block;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+    }
+      .logo {
+        margin: auto;
+        position: relative;
+        animation: move 1s ease;
+      }
+      .logo:before{
+        content: "";
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        z-index: 1;
+        border-radius: 100%;
+        border-style: inset;
+        animation: girar2 1s infinite linear;
+      }
+      @keyframes girar2 {
+        0% {
+          transform: rotate(360deg);
+        }
+      }
+    .navigation{
+        
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .navigation ul{
+        
+        display: none;
+    }
+    
+    .navigation ul.show{
+        
+        display: block;
+    }
+    
+
+    .navigation ul li{
+        
+        display: block;
+    }
+
+    .navigation ul li a{
+        
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+
+    .navigation ul li a:hover{
+        background:rgb(28, 105, 248)
+    }
+    
+    .cards{
+        display: block;
+    }
+    .footer div{
+        display: block;
+        text-align: center;
+        align-items: center;
+
+    }
+
+   .columna2{
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 40px;
+    display: block;
+    margin-bottom: 20px;
+    }
+    .main{
+        text-align: center;
+    }
+}
+
+
