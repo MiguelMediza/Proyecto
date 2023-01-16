@@ -111,7 +111,7 @@
     </div>
 
 
-    <h1 id="planes para" class="planes">Planes disponibles</h1>
+    <h1 id="planes" class="planes">Planes disponibles</h1>
 
     <aside>
 
